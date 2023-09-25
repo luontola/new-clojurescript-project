@@ -11,6 +11,15 @@
   (+ a b))
 
 
+(defn counter [start]
+  (r/with-let [*counter (r/atom start)
+               interval-id (js/setInterval (fn []
+                                             (swap! *counter inc))
+                                           1000)]
+    [:<> "Counter: " @*counter]
+    (finally
+      (js/clearInterval interval-id))))
+
 (defonce *data (r/atom "World"))
 
 (defn app []
@@ -18,7 +27,8 @@
    [:header
     [:h1 "New ClojureScript Project"]]
    [:main
-    [:p "Hello " @*data]]])
+    [:p "Hello " @*data]
+    [:p [counter 1]]]])
 
 
 (defn init! []
