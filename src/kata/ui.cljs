@@ -1,12 +1,13 @@
 (ns kata.ui
-  (:require ["@js-temporal/polyfill$Temporal.Instant" :as Instant]
-            [kitchen-async.promise :as p]
+  (:require [kitchen-async.promise :as p]
             [reagent.core :as r]
             [reagent.dom :as dom]))
 
+(comment
+  (p/promise [resolve _reject]
+    (resolve "example")))
+
 (defn foo [a b]
-  (p/promise [_resolve _reject])
-  (Instant/from "2000-01-01T12:00:00Z")
   (+ a b))
 
 

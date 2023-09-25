@@ -2,6 +2,6 @@
   (:require [clojure.test :refer [deftest is testing]]
             [kata]))
 
-(deftest a-test
-  (testing "FIXME, I fail."
-    (is (= 0 1))))
+(deftest dummy-test
+  (testing "stuff"
+    (is (= 3 (+ 1 2)))))
