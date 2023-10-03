@@ -4,7 +4,7 @@ Something to get quickly started with ClojureScript for a code kata or similar.
 
 ## Requirements
 
-- [Java JDK](https://www.oracle.com/java/technologies/javase-downloads.html) version 11 or higher
+- [Java JDK](https://www.oracle.com/java/technologies/javase-downloads.html) version 17 or higher
 - [Leiningen](https://leiningen.org/)
 
 ### Recommended plugins
